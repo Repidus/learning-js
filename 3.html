@@ -8,14 +8,28 @@
     <h1><a href="index.html">WEB</a></h1>
     <input id="toggle" type="button" value="night" onclick="
         var target = document.querySelector('body').style;
+        var links = document.querySelectorAll('a');
+        
         if (this.value === 'night') {
             target.backgroundColor = 'black';
             target.color = 'white';
             this.value = 'day';
+
+            var i = 0;
+            while (i < links.length) {
+                links[i].style.color = 'powderblue';
+                i += 1;
+            }
         } else {
             target.backgroundColor = 'white';
             target.color = 'black';
             this.value = 'night';
+
+            var i = 0;
+            while (i < links.length) {
+                links[i].style.color = 'blue';
+                i += 1;
+            }
         }
     ">
     <ol>
