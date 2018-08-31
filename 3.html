@@ -7,14 +7,15 @@
 <body>
     <h1><a href="index.html">WEB</a></h1>
     <input id="toggle" type="button" value="night" onclick="
-        if (document.querySelector('#toggle').value === 'night') {
-            document.querySelector('body').style.backgroundColor = 'black';
-            document.querySelector('body').style.color = 'white';
-            document.querySelector('#toggle').value = 'day';
+        var target = document.querySelector('body').style;
+        if (this.value === 'night') {
+            target.backgroundColor = 'black';
+            target.color = 'white';
+            this.value = 'day';
         } else {
-            document.querySelector('body').style.backgroundColor = 'white';
-            document.querySelector('body').style.color = 'black';
-            document.querySelector('#toggle').value = 'night';
+            target.backgroundColor = 'white';
+            target.color = 'black';
+            this.value = 'night';
         }
     ">
     <ol>
